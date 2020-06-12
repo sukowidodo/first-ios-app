@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		5226D5DF2458A0F2007F34C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226D5DE2458A0F2007F34C1 /* AppDelegate.swift */; };
-		5226D5E12458A0F2007F34C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226D5E02458A0F2007F34C1 /* ViewController.swift */; };
+		5226D5E12458A0F2007F34C1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226D5E02458A0F2007F34C1 /* LoginController.swift */; };
 		5226D5E42458A0F2007F34C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5226D5E22458A0F2007F34C1 /* Main.storyboard */; };
 		5226D5E62458A0F5007F34C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5226D5E52458A0F5007F34C1 /* Assets.xcassets */; };
 		5226D5E92458A0F5007F34C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5226D5E72458A0F5007F34C1 /* LaunchScreen.storyboard */; };
+		527E61762493D06A00EF54D4 /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E61752493D06A00EF54D4 /* ResponseLogin.swift */; };
+		527E61782493E23500EF54D4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E61772493E23500EF54D4 /* HomeController.swift */; };
+		5283480A24926614007D266F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283480924926614007D266F /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5226D5DB2458A0F2007F34C1 /* sukoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sukoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5226D5DE2458A0F2007F34C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5226D5E02458A0F2007F34C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5226D5E02458A0F2007F34C1 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5226D5E32458A0F2007F34C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5226D5E52458A0F5007F34C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5226D5E82458A0F5007F34C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5226D5EA2458A0F5007F34C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		527E61752493D06A00EF54D4 /* ResponseLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
+		527E61772493E23500EF54D4 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		5283480924926614007D266F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		5226D5DD2458A0F2007F34C1 /* sukoapp */ = {
 			isa = PBXGroup;
 			children = (
+				527E61742493D05000EF54D4 /* New Group */,
 				5226D5DE2458A0F2007F34C1 /* AppDelegate.swift */,
-				5226D5E02458A0F2007F34C1 /* ViewController.swift */,
+				5226D5E02458A0F2007F34C1 /* LoginController.swift */,
 				5226D5E22458A0F2007F34C1 /* Main.storyboard */,
 				5226D5E52458A0F5007F34C1 /* Assets.xcassets */,
 				5226D5E72458A0F5007F34C1 /* LaunchScreen.storyboard */,
 				5226D5EA2458A0F5007F34C1 /* Info.plist */,
+				5283480924926614007D266F /* Request.swift */,
+				527E61772493E23500EF54D4 /* HomeController.swift */,
 			);
 			path = sukoapp;
+			sourceTree = "<group>";
+		};
+		527E61742493D05000EF54D4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				527E61752493D06A00EF54D4 /* ResponseLogin.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5226D5E12458A0F2007F34C1 /* ViewController.swift in Sources */,
+				5226D5E12458A0F2007F34C1 /* LoginController.swift in Sources */,
+				5283480A24926614007D266F /* Request.swift in Sources */,
+				527E61762493D06A00EF54D4 /* ResponseLogin.swift in Sources */,
 				5226D5DF2458A0F2007F34C1 /* AppDelegate.swift in Sources */,
+				527E61782493E23500EF54D4 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
