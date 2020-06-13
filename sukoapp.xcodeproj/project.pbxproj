@@ -13,7 +13,7 @@
 		5226D5E62458A0F5007F34C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5226D5E52458A0F5007F34C1 /* Assets.xcassets */; };
 		5226D5E92458A0F5007F34C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5226D5E72458A0F5007F34C1 /* LaunchScreen.storyboard */; };
 		527E61762493D06A00EF54D4 /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E61752493D06A00EF54D4 /* ResponseLogin.swift */; };
-		527E61782493E23500EF54D4 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E61772493E23500EF54D4 /* HomeController.swift */; };
+		527E61802495183C00EF54D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E617F2495183C00EF54D4 /* HomeViewController.swift */; };
 		5283480A24926614007D266F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283480924926614007D266F /* Request.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		5226D5E82458A0F5007F34C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5226D5EA2458A0F5007F34C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527E61752493D06A00EF54D4 /* ResponseLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
-		527E61772493E23500EF54D4 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		527E617F2495183C00EF54D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5283480924926614007D266F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 				5226D5E72458A0F5007F34C1 /* LaunchScreen.storyboard */,
 				5226D5EA2458A0F5007F34C1 /* Info.plist */,
 				5283480924926614007D266F /* Request.swift */,
-				527E61772493E23500EF54D4 /* HomeController.swift */,
+				527E617F2495183C00EF54D4 /* HomeViewController.swift */,
 			);
 			path = sukoapp;
 			sourceTree = "<group>";
@@ -152,11 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527E61802495183C00EF54D4 /* HomeViewController.swift in Sources */,
 				5226D5E12458A0F2007F34C1 /* LoginController.swift in Sources */,
 				5283480A24926614007D266F /* Request.swift in Sources */,
 				527E61762493D06A00EF54D4 /* ResponseLogin.swift in Sources */,
 				5226D5DF2458A0F2007F34C1 /* AppDelegate.swift in Sources */,
-				527E61782493E23500EF54D4 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
