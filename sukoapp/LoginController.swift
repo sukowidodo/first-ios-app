@@ -18,33 +18,21 @@ class LoginController: UIViewController {
         let password = etPassword.text!
         
         let req = Request()
-        
-        req.httpRequest(endpoint: "/login",
-                        parameters: ["username" : username, "password" : password],
-                        completion: { result in
-            switch result {
-            case .success(let message):
-                if message.code==200{
-                    DispatchQueue.main.async{
-                    self.performSegue(withIdentifier: "first_segue", sender: message)
-                    }
-                }else{
-                    DispatchQueue.main.async{
-                        let alertController = UIAlertController(title: "Error", message:
-                            message.message, preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
-                        
-                        self.present(alertController, animated: true, completion: nil)
-                    }
+        req.loginPost(with: "/auth/login", parameters: ["username" : username, "password" : password]) { (data, response, err) in
+            if data?.code == 200 {
+                DispatchQueue.main.async{
+                    self.performSegue(withIdentifier: "first_segue", sender: data)
                 }
-                break
-                case .failed(let err):
-                    print(err)
-                    break
-                default:
-                    break
+            } else {
+                DispatchQueue.main.async{
+                    let alertController = UIAlertController(title: "Error", message:
+                        data?.message, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
-        })
+        }
     }
     
     override func viewDidLoad() {

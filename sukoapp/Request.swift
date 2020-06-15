@@ -8,21 +8,15 @@
 
 import Foundation
 
-
-enum MyResult<T, E:Error>{
-    case success(T)
-    case failed(E)
-}
-
 class Request{
-    let baseUrl = "http://sukowidodo.com:8080/users"
-    func httpRequest(
-            endpoint:String,
+    let baseUrl = "http://sukowidodo.com:8080"
+    
+    func httpRequest <T: Codable>(
+            endpoint: String,
             parameters: [String: Any],
-            completion:@escaping(MyResult<ResponseLogin, Error>) -> Void
+            completion: @escaping(T?, URLResponse?, Error?) -> Void
         ) {
-        guard let url = URL(string:baseUrl+endpoint)else{
-            completion(.failed(NetworkingError.badUrl))
+        guard let url = URL(string : baseUrl+endpoint)else{
             return
         }
         
@@ -33,27 +27,38 @@ class Request{
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {
             return
         }
+        
         request.httpBody = httpBody
         request.timeoutInterval = 20
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-            if let response = response {
-                print(response)
+            guard let data = data, error == nil else {
+                completion(nil, response, error)
+                return
             }
-            if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let people = try decoder.decode(ResponseLogin.self, from: data)
-                    completion(.success(people))
-                } catch {
-                    completion(.failed(error))
-                }
-            }
+            completion(try? self.newJSONDecoder().decode(T.self, from: data), response, nil)
+            
             }.resume()
         
     }
-}
+    
+    func newJSONDecoder() -> JSONDecoder {
+        let decoder = JSONDecoder()
+        if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+            decoder.dateDecodingStrategy = .iso8601
+        }
+        return decoder
+    }
 
-enum NetworkingError: Error{
-    case badUrl
+    func newJSONEncoder() -> JSONEncoder {
+        let encoder = JSONEncoder()
+        if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+            encoder.dateEncodingStrategy = .iso8601
+        }
+        return encoder
+    }
+    
+    func loginPost(with path: String, parameters:[String : Any], completion: @escaping (ResponseLogin?, URLResponse?, Error?) -> Void) -> Void {
+        httpRequest(endpoint: path, parameters: parameters, completion: completion)
+    }
 }

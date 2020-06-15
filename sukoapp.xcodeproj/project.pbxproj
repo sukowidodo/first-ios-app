@@ -15,6 +15,7 @@
 		527E61762493D06A00EF54D4 /* ResponseLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E61752493D06A00EF54D4 /* ResponseLogin.swift */; };
 		527E61802495183C00EF54D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E617F2495183C00EF54D4 /* HomeViewController.swift */; };
 		5283480A24926614007D266F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283480924926614007D266F /* Request.swift */; };
+		528A1B0E24967B5C0074AC9F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A1B0D24967B5C0074AC9F /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		527E61752493D06A00EF54D4 /* ResponseLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogin.swift; sourceTree = "<group>"; };
 		527E617F2495183C00EF54D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5283480924926614007D266F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		528A1B0D24967B5C0074AC9F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 		5226D5DD2458A0F2007F34C1 /* sukoapp */ = {
 			isa = PBXGroup;
 			children = (
-				527E61742493D05000EF54D4 /* New Group */,
+				527E61742493D05000EF54D4 /* Login */,
 				5226D5DE2458A0F2007F34C1 /* AppDelegate.swift */,
 				5226D5E02458A0F2007F34C1 /* LoginController.swift */,
 				5226D5E22458A0F2007F34C1 /* Main.storyboard */,
@@ -73,12 +75,13 @@
 			path = sukoapp;
 			sourceTree = "<group>";
 		};
-		527E61742493D05000EF54D4 /* New Group */ = {
+		527E61742493D05000EF54D4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				527E61752493D06A00EF54D4 /* ResponseLogin.swift */,
+				528A1B0D24967B5C0074AC9F /* Data.swift */,
 			);
-			path = "New Group";
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				527E61802495183C00EF54D4 /* HomeViewController.swift in Sources */,
+				528A1B0E24967B5C0074AC9F /* Data.swift in Sources */,
 				5226D5E12458A0F2007F34C1 /* LoginController.swift in Sources */,
 				5283480A24926614007D266F /* Request.swift in Sources */,
 				527E61762493D06A00EF54D4 /* ResponseLogin.swift in Sources */,
